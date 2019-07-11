@@ -12,14 +12,12 @@ export default ({ children, title = 'This is the default title' }) => (
             <nav>
                 <Link href='/'>
                     <a>Home</a>
-                </Link>{' '}
-                |
+                </Link>
                 <Link href='/about'>
-                    <a>About</a>
-                </Link>{' '}
-                |
-                <Link href='/contact'>
-                    <a>Contact</a>
+                    <a> | About</a>
+                </Link>
+                <Link href={{ pathname: '/posts', query: { slug: 'ten-bai-viet' } }} as='/posts/ten-bai-viet'>
+                    <a> | post #1</a>
                 </Link>
             </nav>
         </header>

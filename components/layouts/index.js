@@ -17,7 +17,10 @@ export default ({ children, title = 'This is the default title' }) => (
                     <a> | About</a>
                 </Link>
                 <Link href={{ pathname: '/posts', query: { slug: 'ten-bai-viet' } }} as='/posts/ten-bai-viet'>
-                    <a> | post #1</a>
+                    <a> | Post #1</a>
+                </Link>
+                <Link href={{ pathname: '/countries'}} as='/countries'>
+                    <a> | Countries</a>
                 </Link>
             </nav>
         </header>

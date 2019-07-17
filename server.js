@@ -1,12 +1,12 @@
-const express = require("express");
-const next = require("next");
-const path = require("path");
+import express from 'express';
+import next from 'next';
+import path from 'path';
+import * as ApiServices from './services/api';
 
 const port = parseInt(process.env.PORT, 10) || 3000;
 const dev = process.env.NODE_ENV !== 'production';
 const app = next({dev});
 const handle = app.getRequestHandler();
-const ApiServices = require('./services/api');
 
 app.prepare().then(() => {
     const server = express();
